@@ -3,8 +3,16 @@
 }
 
 .container {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 250px;
 }
 
 .food-container {
@@ -12,4 +20,26 @@
   flex-direction: row;
   align-items: center;
   gap: 10px;
+  overflow: scroll;
+  /* scrollbar-width: none; */
+  width: 400px;
+  height: 270px;
+}
+
+.food-container::-webkit-scrollbar {
+  display: none;
+}
+
+.progress-bar-container {
+  background-color: rgb(231, 231, 231);
+  border-radius: 20px;
+  width: 100%;
+  height: 15px;
+}
+
+.progress-bar {
+  background-color: #246ca3;
+  border-radius: 20px;
+  width: 0;
+  height: 100%;
 }
